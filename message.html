@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <title>Message</title>
+</head>
+<body>
+
+    <div id="floating-image"></div>
+    <div class="letter">
+        <h1>Happy 3rd Anniversary! My love<span class="heart">❤️</span></h1>
+        <p>
+        Happy Happy 3rd Anniversary My Love, Baby and Wifey <br> 
+        Just a simple greetings from your man hehehe, another new year of our love and relationship. <br>
+        Thank you love for another wonderful year, for the new experiences and for your love hehehe and looking forward na agad sa mga darating pa. <br>
+        It's been a wild ride hehehe I know na we have out up and down times but still here we are standing strong pa rin kahit anong mangyari hehehe. <br>
+        Love syemre hindi mawawala ung pag hingi ko sayo ng patawad alam kong nasaktan ko rin and damdamin mo and I take it  to my heart masakit din para sakin na nagawa kitang saktan and I want to realy apologize to you love. <br>
+        Thank you love lagi kang nanjan sa tabi ko lagi kang sumusuporata sa akin and I'm really really gald na ikaw ang naging girlfriend ko and soon to be.. hehehhe <br>
+        Happy Happy 3rd Anniversary ulit My Love, Baby and Wifey <br>
+        Looking forward for another year of more memories, laughter and love <br>
+        </p>
+        <h2>I love you so much!!! Lorie <span class="heart">❤️</span></h2>
+        <div class="hearts-container"></div>
+      </div>
+      
+<!-- <script src="script.js"></script> -->
+
+<script>
+    const floatContainer = document.getElementById('floating-image');
+    const imageSources = [
+        'images/1.jpg',
+        'images/2.jpg',
+        'images/3.jpg',
+        'images/4.jpg',
+        'images/5.jpg',
+        'images/6.jpg',
+        'images/7.jpg',
+        'images/8.jpg',
+        'images/9.jpg',
+        'images/10.jpg',
+        'images/11.jpg',
+        'images/12.jpg'
+    ];
+
+    function createFloatingImage() {
+      const img = document.createElement('img');
+      img.src = imageSources[Math.floor(Math.random() * imageSources.length)];
+      img.classList.add('floating-img');
+
+      img.style.left = Math.random() * 100 + 'vw';
+      img.style.top = '100vh';
+
+      floatContainer.appendChild(img);
+
+      setTimeout(() => {
+        img.remove();
+      }, 8000);
+    }
+
+    setInterval(createFloatingImage, 600);
+  </script>
+</body>
+</html>
